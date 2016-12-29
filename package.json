@@ -19,6 +19,7 @@
   "homepage": "https://github.com/theGwall/rejection#readme",
   "dependencies": {
     "express": "^4.14.0",
-    "mongoose": "^4.7.5"
+    "mongoose": "^4.7.5",
+    "nodemon": "^1.11.0"
   }
 }
