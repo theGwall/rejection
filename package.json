@@ -1,0 +1,23 @@
+{
+    "name"        : "MEAN",
+    "version"     : "0.0.5",
+    "main"        : "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express"           : "latest",
+        "morgan"            : "latest",
+        "compression"       : "latest",
+        "body-parser"       : "latest",
+        "method-override"   : "latest",
+        "express-session"   : "latest",
+        "ejs"               : "latest",
+        "connect-flash"     : "latest",
+        "mongoose"          : "latest",
+        "passport"          : "latest",
+        "passport-local"    : "latest",
+        "passport-facebook" : "latest"
+
+    }
+}
