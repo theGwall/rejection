@@ -1,13 +1,12 @@
-'use strict'
+"use strict";
 
 
-var express = require('express');
-var todos = require('../../mock/todos.json')
-var router = express.Router();
+var express = require('express'),
+ todos      = require('../../mock/todos.json'),
+ router     = express.Router();
 
 
 router.get('/todos', function(req, res) {
-    // here we tell our api to send mock data we required
     res.json({todos:todos});
 });
 
@@ -16,4 +15,6 @@ router.get('/todos', function(req, res) {
 // TODO: Add PUT route to update existing entries
 
 // TODO: Add DELETE route to delete todo
+
+
 module.exports = router;
