@@ -1,3 +1,19 @@
+/*
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+layout.css - styles for .main-section of rejection app
+
+
+
+white: #f9f9f9
+red:#d9534f
+blue: #5bc0de
+dark blue: #428bca
+green: #5cb85c
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+*/
+
 * {
   box-sizing: border-box;
 }
@@ -14,18 +30,144 @@ section {
   display: table;
   margin: 0;
   max-width: none;
-  background-color: #373B44;
+  /*height: 100vh;*/
+
+
+}
+
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+/* backround for main-section */
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+.main-section {
   height: 100vh;
-
-  &:nth-of-type(2n) {
-    background-color: #FE4B74;
-  }
+  background: rgba(66,139,202,1);
+  background: -moz-linear-gradient(top, rgba(66,139,202,1) 0%, rgba(66,139,202,1) 8%, rgba(91,192,222,1) 44%, rgba(249,249,249,1) 75%, rgba(92,184,92,1) 91%, rgba(92,184,92,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(66,139,202,1)), color-stop(8%, rgba(66,139,202,1)), color-stop(44%, rgba(91,192,222,1)), color-stop(75%, rgba(249,249,249,1)), color-stop(91%, rgba(92,184,92,1)), color-stop(100%, rgba(92,184,92,1)));
+  background: -webkit-linear-gradient(top, rgba(66,139,202,1) 0%, rgba(66,139,202,1) 8%, rgba(91,192,222,1) 44%, rgba(249,249,249,1) 75%, rgba(92,184,92,1) 91%, rgba(92,184,92,1) 100%);
+  background: -o-linear-gradient(top, rgba(66,139,202,1) 0%, rgba(66,139,202,1) 8%, rgba(91,192,222,1) 44%, rgba(249,249,249,1) 75%, rgba(92,184,92,1) 91%, rgba(92,184,92,1) 100%);
+  background: -ms-linear-gradient(top, rgba(66,139,202,1) 0%, rgba(66,139,202,1) 8%, rgba(91,192,222,1) 44%, rgba(249,249,249,1) 75%, rgba(92,184,92,1) 91%, rgba(92,184,92,1) 100%);
+  background: linear-gradient(to bottom, rgba(66,139,202,1) 0%, rgba(66,139,202,1) 8%, rgba(91,192,222,1) 44%, rgba(249,249,249,1) 75%, rgba(92,184,92,1) 91%, rgba(92,184,92,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#428bca', endColorstr='#5cb85c', GradientType=0 );
 }
 
-.intro {
-  height: 90vh;
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+/* clouds on top of main-section */
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+
+#clouds{
+  padding: 100px 0;
 }
 
+.cloud {
+  width: 200px; height: 60px;
+  background: #fff;
+
+  border-radius: 200px;
+  -moz-border-radius: 200px;
+  -webkit-border-radius: 200px;
+
+  position: relative;
+}
+
+.cloud:before, .cloud:after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  width: 100px; height: 80px;
+  position: absolute; top: -15px; left: 10px;
+
+  border-radius: 100px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+}
+
+.cloud:after {
+  width: 120px; height: 120px;
+  top: -55px; left: auto; right: 15px;
+}
+
+/*Time to animate*/
+.x1 {
+  -webkit-animation: moveclouds 125s linear infinite;
+  -moz-animation: moveclouds 125s linear infinite;
+  -o-animation: moveclouds 125s linear infinite;
+}
+
+/*variable speed, opacity, and position of clouds for realistic effect*/
+.x2 {
+  left: 200px;
+
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  transform: scale(0.6);
+  opacity: 0.6; /*opacity proportional to the size*/
+
+  /*Speed will also be proportional to the size and opacity*/
+  /*More the speed. Less the time in 's' = seconds*/
+  -webkit-animation: moveclouds 135s linear infinite;
+  -moz-animation: moveclouds 135s linear infinite;
+  -o-animation: moveclouds 135s linear infinite;
+}
+
+.x3 {
+  left: -250px; top: -200px;
+
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 0.8; /*opacity proportional to the size*/
+
+  -webkit-animation: moveclouds 140s linear infinite;
+  -moz-animation: moveclouds 140s linear infinite;
+  -o-animation: moveclouds 140s linear infinite;
+}
+
+.x4 {
+  left: 470px; top: -250px;
+
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  transform: scale(0.75);
+  opacity: 0.75; /*opacity proportional to the size*/
+
+  -webkit-animation: moveclouds 150s linear infinite;
+  -moz-animation: moveclouds 150s linear infinite;
+  -o-animation: moveclouds 150s linear infinite;
+}
+
+.x5 {
+  left: -150px; top: -150px;
+
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 0.8; /*opacity proportional to the size*/
+
+  -webkit-animation: moveclouds 130s linear infinite;
+  -moz-animation: moveclouds 130s linear infinite;
+  -o-animation: moveclouds 130s linear infinite;
+}
+
+@-webkit-keyframes moveclouds {
+  0% {margin-left: 1000px;}
+  100% {margin-left: -1000px;}
+}
+@-moz-keyframes moveclouds {
+  0% {margin-left: 1000px;}
+  100% {margin-left: -1000px;}
+}
+@-o-keyframes moveclouds {
+  0% {margin-left: 1000px;}
+  100% {margin-left: -1000px;}
+}
+
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+/* .content  */
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 .content {
   display: table-cell;
   vertical-align: middle;
@@ -58,10 +200,13 @@ a {
   }
 }
 
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+/* footer */
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 footer {
-  padding: 1% 5%;
+  padding: 10% 5%;
   text-align:center;
-  background-color: #373B44;
+  background-color: #d9534f;
   color: white;
 
   a {
